@@ -1,0 +1,222 @@
+html {
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+
+body {
+    background: radial-gradient(circle at center, #bdbdbd 0%, #888 100%);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.product-card {
+    background: #232323;
+    border-radius: 24px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    position: relative;
+    transition: transform 0.2s;
+}
+.product-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 16px 40px 0 rgba(31, 38, 135, 0.35);
+}
+
+.product-image {
+    position: relative;
+    padding: 1.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+.product-card.blue .product-image {
+    background: radial-gradient(circle at center, #00aaff 0%, #232323 75%);
+}
+.product-image img {
+    width: 80%;
+    height: auto;
+    z-index: 2;
+    filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
+}
+.price-tag {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    background: #00aaff;
+    color: #fff;
+    font-weight: 700;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0 12px 0 12px;
+    font-size: 1rem;
+    z-index: 3;
+}
+
+
+.product-info {
+    background: #2d2d2d;
+    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+    border-radius: 0 0 24px 24px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 220px;
+}
+
+.info-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+.info-main {
+    flex: 1 1 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+.features {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 0;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.product-info {
+    display: flex;
+    align-items: center;
+}
+
+.product-info h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 1px;
+}
+.product-info p {
+    font-size: 0.98rem;
+    color: #d1d1d1;
+    margin: 0 0 1rem 0;
+}
+
+.feature-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #00aaff;
+    margin-bottom: 0.1rem;
+}
+
+.feature-desc {
+    font-size: 0.92rem;
+    color: #bdbdbd;
+    margin-bottom: 0.2rem;
+}
+.stars {
+    display: flex;
+    gap: 0.2rem;
+    margin: 0.5rem 0 1.2rem 0;
+}
+.star {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23bdbdbd" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568L24 9.423l-6 5.849L19.335 24 12 19.771 4.665 24 6 15.272 0 9.423l8.332-1.268z"/></svg>') no-repeat center/contain;
+}
+.star.filled {
+    background: url('data:image/svg+xml;utf8,<svg fill="%2300aaff" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .587l3.668 7.568L24 9.423l-6 5.849L19.335 24 12 19.771 4.665 24 6 15.272 0 9.423l8.332-1.268z"/></svg>') no-repeat center/contain;
+}
+
+
+.add-to-cart {
+    width: 100%;
+    padding: 0.7rem 0;
+    border: none;
+    border-radius: 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 1.2rem;
+    cursor: pointer;
+    transition: background 0.2s;
+    letter-spacing: 1px;
+}
+.add-to-cart.blue {
+    background: #00aaff;
+}
+
+.add-to-cart:hover {
+    filter: brightness(1.1);
+}
+
+
+
+
+
+
+
+
+/* //////////////// */
+.btn{
+  display: block;
+  margin-top: 20px;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: white ;
+  border: none;
+  background-color: #35AAFB;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all .35s;
+  border-radius: 50px;
+}
+
+.btn span{
+  position: relative;
+  font-weight: bolder;
+  z-index: 2;
+}
+
+.btn:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 50px;
+  background: #206691;
+  transition: all .35s;
+}
+
+
+.btn:hover:after{
+  width: 100%;
+}
